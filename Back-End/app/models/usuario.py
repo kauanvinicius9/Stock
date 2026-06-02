@@ -1,12 +1,10 @@
-from sqlalchemy import Column,Integer,String
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
+from sqlalchemy import Column, Integer, String
+from database import Base
 
 class Usuario(Base):
     __tablename__ = "usuarios"
 
-    id=Column(Integer, primary_key=True)
-    nome=Column(String(100))
+    id=Column(Integer,primary_key=True)
+    name=Column(String(100))
     email=Column(String(100))
-    senha=Column(String(255))
+    password=Column(String(255))

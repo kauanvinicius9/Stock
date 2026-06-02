@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styles from "../components/scss/login.scss";
-import { useState } from 'react';
 
-const [isRegister, setIsRegister] = useState("")
 
 export default function GestaoEstoque() {
+  const [isRegister, setIsRegister] = useState("")
+  
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Gestão de Estoque</h2>
