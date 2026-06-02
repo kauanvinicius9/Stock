@@ -18,7 +18,7 @@ export default function CadastroProdutos() {
       <div>
         <h3>Lista de Produtos</h3>
          <input className={styles.get_product} type="text" placeholder="Busque pelo ID/Nome"/>
-         <button className={styles.button} type="submit" onClick={() => ()}>Buscar</button>
+         {/* <button className={styles.button} type="submit" onClick={() => ()}>Buscar</button> */}
       
         <ul>
           <li className={styles.crud}>

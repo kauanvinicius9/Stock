@@ -1,13 +1,44 @@
 from fastapi import APIRouter
-from app.schemas.usuario import UsuarioLogin
+from fastapi import HTTPException
+
+from passlib.context import CryptContext
+
+from app.models.database import SessionLocal
+from app.models import User
+from app.schemas import LoginSchema
 
 router = APIRouter()
 
+pwd_context=CryptContext(
+    schemes=["bcrypt"],
+    deprecated="auto"
+)
+
 @router.post("/login")
-def login(usuario:UsuarioLogin):
-    if usuario.email != "admin@email.com":
-        return {"erro": "Usuário não encontrado"}
+def login(data: LoginSchema):
+    
+    db=SessionLocal()
+    user=db.query(User).filter(
+        User.email==data.email
+    ).first()
+
+    if not user:
+        raise HTTPException(
+            status_code=401,
+            detail="Usuário não encontrado"
+        )
+    
+    if not pwd_context.verify(
+        data.password,
+        user.password
+    ):
+        raise HTTPException(
+            status_code=401,
+            detail="Senha inválida"
+        )
     
     return {
-        "mensagem": "Login realizado"
+        "id": user.id,
+        "username": user.username,
+        "is_superuser": user.is_superuser
     }
