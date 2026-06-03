@@ -10,5 +10,5 @@ class Movimentacao(Base):
     produto_id=Column(Integer,ForeignKey("produtos.id"))
     usuario_id=Column(Integer,ForeignKey("usuarios.id"))
     tipo=Column(String(20))
-    quantidade=(Column(Integer))
+    quantidade=Column(Integer)
     data_movimentacao=Column(DateTime)

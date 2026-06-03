@@ -22,10 +22,23 @@ def saida():
 
 @router.post("/movimentacao")
 def registrar_movimentacao(
-    movimentacao: MovimentacaoCreate
+    movimentacao: MovimentacaoCreate,
+    db: Session=Depends(get_db)
 ):
+    nova_movimentacao=Movimentacao(
+        produto_id=movimentacao.produto_id,
+        usuario_id=movimentacao.usuario_id,
+        tipo=movimentacao.tipo,
+        quantidade=movimentacao.quantidade,
+        data_movimentacao=movimentacao.data_movimentacao
+    )
+
+    db.add(nova_movimentacao)
+    db.commit()
+    db.refresh(nova_movimentacao)
+
     return {
-        "mensagem": "Movimentação Registrada",
+        "mensagem": "Movimentação registrada",
         "dados": movimentacao
     }
 
