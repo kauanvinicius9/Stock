@@ -1,5 +1,10 @@
-from fastapi import APIRouter
-from app.schemas.movimentacao import MovimentacaoBase
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+
+from app.models.database import get_db
+from app.models.movimentacao import Movimentacao
+
+from app.schemas.movimentacao import MovimentacaoCreate
 
 router = APIRouter()
 
@@ -23,3 +28,7 @@ def registrar_movimentacao(
         "mensagem": "Movimentação Registrada",
         "dados": movimentacao
     }
+
+@router.get("/movimentacao")
+def listar_movimentacoes(db: Session=Depends(get_db)):
+    return db.query(Movimentacao).all()
