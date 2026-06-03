@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "../components/scss/login.scss";
+import styles from "../components/scss/gestao.module.scss";
 
 export default function GestaoEstoque() {
   const [produto, setProduto] = useState("");
