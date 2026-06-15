@@ -5,13 +5,13 @@ import styles from "../components/scss/login.module.scss";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [erro, setErro] = useState("");
+    const [error, setError] = useState("");
 
     const navigate = useNavigate();
 
     async function handleLogin(e) {
         e.preventDefault();
-        setErro("");
+        setError("");
 
         try {
             const response = await fetch(
@@ -38,7 +38,7 @@ function Login() {
             if (!response.ok) {
                 throw new Error("Usuário ou senha inválidos");
             }
-            navigate("/produtos");
+            navigate("/products");
         } catch (error) {
             setErro(error.message);
         }

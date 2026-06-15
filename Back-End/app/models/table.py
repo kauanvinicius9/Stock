@@ -1,5 +1,5 @@
 from app.models.database import Base, engine
-from app.models.usuario import Usuario
+from app.models.user import User
 
 Base.metadata.create_all(bind=engine)
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Login from './components/login';
-import Principal from './components/principal';
-import CadastroProdutos from './components/cadastro';
-import GestaoEstoque from './components/gestao';
+import Main from './components/main';
+import RegistrationProduct from './components/registration';
+import ManagementProduct from './components/management';
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/principal" element={<Principal />} />
-        <Route path="/cadastro" element={<CadastroProdutos />} />
-        <Route path="/gestao" element={<GestaoEstoque />} />
+        <Route path="/main" element={<Main />} />
+        <Route path="/registration" element={<RegistrationProduct />} />
+        <Route path="/management" element={<ManagementProduct />} />
       </Routes>
     </Router>
   );

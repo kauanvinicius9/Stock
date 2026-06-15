@@ -4,7 +4,7 @@ from fastapi import HTTPException
 from passlib.context import CryptContext
 
 from app.models.database import SessionLocal
-from app.models.usuario import Usuario
+from app.models.user import User
 from app.schemas.schemas import LoginSchema
 
 router = APIRouter()
@@ -18,8 +18,8 @@ pwd_context=CryptContext(
 def login(data: LoginSchema):
     
     db=SessionLocal()
-    user=db.query(Usuario).filter(
-        Usuario.email==data.email
+    user=db.query(User).filter(
+        User.email==data.email
     ).first()
 
     if not user:
