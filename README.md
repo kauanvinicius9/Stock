@@ -1,8 +1,8 @@
-# SAEP
+# STOCK
 
 ###
 
-**<h3>Rotas Front-End</h3>**
+**<h3>Routes Front-End</h3>**
 
 ###
 
@@ -11,20 +11,20 @@
 ```
 
 ```powershell
- http://127.0.0.1:8000/principal
+ http://127.0.0.1:8000/main
 ```
 
 ```powershell
- http://127.0.0.1:8000/cadastro
+ http://127.0.0.1:8000/registration
 ```
 
 ```powershell
- http://127.0.0.1:8000/gestao
+ http://127.0.0.1:8000/management
 ```
 
 ---
 
-**<h3>Rotas Back-End</h3>**
+**<h3>Routes Back-End</h3>**
 
 ###
 
@@ -34,58 +34,58 @@
 http://127.0.0.1:8000/docs
 ```
 
-> POST: Autenticação (Login)
+> POST: Autentication (Login)
 
 ```powershell
 http://127.0.0.1:8000/auth/login
 ```
 
-> POST: Estoque (Entrada, Saída, Registrar Movimentação)
+> POST: Stock (Input, Output, Register Movimentation)
 
 ```powershell
-http://127.0.0.1:8000/estoque/entrada
+http://127.0.0.1:8000/stock/input
 ```
 
 ```powershell
-http://127.0.0.1:8000/estoque/saida
+http://127.0.0.1:8000/stock/output
 ```
 
 ```powershell
-http://127.0.0.1:8000/estoque/movimentacao
+http://127.0.0.1:8000/stock/movimentation
 ```
 
-**GET**: Estoque (Listar Movimentações)
+**GET**: Stock (List Movimentations)
 
 ```powershell
-http://127.0.0.1:8000/estoque/movimentacao
+http://127.0.0.1:8000/stock/movimentation
 ```
 
-**GET**, **POST**, **PUT**, **DELETE**: Produtos (Listar Produtos, Criar Produtos, Buscar Produto, Excluir Produto, Editar Produto)
+**GET**, **POST**, **PUT**, **DELETE**: Products (List Products, Create Products, Get Products, Delete Products, Edit Products)
 
-GET Produtos
+GET Products
 
 ```powershell
-http://127.0.0.1:8000/produtos/ 
+http://127.0.0.1:8000/products/ 
 ```
 
 ```powershell
-http://127.0.0.1:8000/produtos/{produtos_id}
+http://127.0.0.1:8000/products/{products_id}
 ```
 
-POST Produtos
+POST Products
 
 ```powershell
-http://127.0.0.1:8000/produtos/
+http://127.0.0.1:8000/products/
 ```
 
-DELETE Produtos
+DELETE Products
 
 ```powershell
-http://127.0.0.1:8000/produtos/{produtos_id}
+http://127.0.0.1:8000/products/{products_id}
 ```
 
-PUT Produtos
+PUT Products
 
 ```powershell
-http://127.0.0.1:8000/produtos/{produtos_id}
+http://127.0.0.1:8000/products/{products_id}
 ```
