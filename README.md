@@ -62,7 +62,7 @@ http://127.0.0.1:8000/stock/movimentation
 
 **GET**, **POST**, **PUT**, **DELETE**: Products (List Products, Create Products, Get Products, Delete Products, Edit Products)
 
-GET Products
+> GET Products
 
 ```powershell
 http://127.0.0.1:8000/products/ 
@@ -72,19 +72,19 @@ http://127.0.0.1:8000/products/
 http://127.0.0.1:8000/products/{products_id}
 ```
 
-POST Products
+> POST Products
 
 ```powershell
 http://127.0.0.1:8000/products/
 ```
 
-DELETE Products
+> DELETE Products
 
 ```powershell
 http://127.0.0.1:8000/products/{products_id}
 ```
 
-PUT Products
+> PUT Products
 
 ```powershell
 http://127.0.0.1:8000/products/{products_id}
