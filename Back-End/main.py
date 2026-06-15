@@ -2,22 +2,22 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.routers import auth
-from app.routers import produtos
-from app.routers import estoque
+from app.routers import products
+from app.routers import stock
 
-from app.models.usuario import Usuario
+from app.models.user import User
 from app.models.database import Base
 from app.models.database import engine
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(
-    title="SAEP API",
-    description="Avaliação final: API de gerenciamento de estoque e autenticação SAEP",
+app=FastAPI(
+    title="ESTOQUE API",
+    description="API de gerenciamento de estoque e autenticação",
     version="1.0.0"
 )
 
-origins = [
+origins=[
     "http://localhost:3000",
 ]
 
@@ -31,18 +31,18 @@ app.add_middleware(
 app.include_router(
     auth.router,
     prefix="/auth",
-    tags=["Autenticação"]
+    tags=["Autentication"]
 )
 
 app.include_router(
-    produtos.router,
-    prefix="/produtos",
-    tags=["Produtos"]
+    products.router,
+    prefix="/products",
+    tags=["Products"]
 
 )
 
 app.include_router(
-    estoque.router,
-    prefix="/estoque",
-    tags=["Estoque"]
+    stock.router,
+    prefix="/stock",
+    tags=["Stock"]
 )

@@ -1,12 +1,10 @@
 from database import SessionLocal
-from usuario import Usuario
+from user import User
 from passlib.context import CryptContext
 
-pwd_context = CryptContext(schemes=["bcrypt"])
-
-db = SessionLocal()
-
-admin = Usuario(
+pwd_context=CryptContext(schemes=["bcrypt"])
+db=SessionLocal()
+admin=User(
     name="admin",
     email="admin@saep.com",
     password=pwd_context.hash("12345")
