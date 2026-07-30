@@ -11,3 +11,6 @@ class Product(Base):
     stock_today=Column(Integer)
     stock_min=Column(Integer)
     load=Column(Float)
+
+    def __repr__(self):
+        return f"<Product(id={self.id}, name='{self.name}', stock={self.stock_today})>"

@@ -12,3 +12,9 @@ class Movimentation(Base):
     type=Column(String(20))
     quantity=Column(Integer)
     movimentation_data=Column(DateTime)
+
+    def __repr__(self):
+        return (
+            f"<Movimentation(id={self.id}, type='{self.type}', "
+            f"qty={self.quantity}, product_id={self.product_id})>"
+        )
