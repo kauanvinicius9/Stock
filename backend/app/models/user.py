@@ -9,7 +9,5 @@ class User(Base):
     email=Column(String(100))
     password=Column(String(255))
 
-    is_superuser=Column(Boolean,default=False)
-
     def __repr__(self):
         return f"<User(id={self.id}, name='{self.name}', email='{self.email}')>"

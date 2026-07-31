@@ -114,7 +114,7 @@ export default function ManagementProduct() {
 
           {msg && (
             <div className="mt-4 p-2.5 bg-white rounded text-xs text-black">
-              <span className="text-red-600 font-semibold">Log:</span> {msg}
+              {msg}
             </div>
           )}
 
@@ -139,16 +139,16 @@ export default function ManagementProduct() {
                   </tr>
                 </thead>
 
-                <tbody className="divide-y divide-slate-800/50">
+                <tbody className="divide-y divide-zinc-200">
                   {movimentations.map((item, index) => (
-                    <tr key={item.id || index} className="hover:bg-slate-900/50 transition-colors">
+                    <tr key={item.id || index} className="hover:bg-zinc-200">
                       <td className="py-2 px-3 text-zinc-400">{item.product_id}</td>
                       <td className="py-2 px-3">
                         <span
                           className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-bold ${
                             item.type === "Entrada"
-                              ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-                              : "bg-red-600 text-white border"
+                              ? "bg-green-600 text-white"
+                              : "bg-red-600 text-white"
                           }`}>{item.type}
                         </span>
 
