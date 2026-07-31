@@ -34,7 +34,7 @@
 http://127.0.0.1:8000/docs
 ```
 
-> POST: Autentication (Login)
+> POST: Authentication (Login)
 
 ```powershell
 http://127.0.0.1:8000/auth/login

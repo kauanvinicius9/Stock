@@ -49,18 +49,18 @@ export default function Login() {
      
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-xs font-medium text-slate-400 mb-1">Email / Usuário:</label>
+            <label className="block text-xs font-normal text-zinc-400 mb-1">Email / Usuário</label>
             <input type="text" value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black focus:outline-none hover:bg-zinc-300" required/>
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-slate-400 mb-1">Senha:</label>
+            <label className="block text-xs font-normal text-zinc-400 mb-1">Senha</label>
             <input type="password" value={password} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black focus:outline-none hover:bg-zinc-300" required/>
           </div>
 
           {error && (
-            <div className="p-2.5 bg-red-950/40 border border-red-900/60 rounded text-red-400 text-xs font-sans">
-              <strong className="font-semibold font-mono">Erro:</strong> {error}
+            <div className="p-2.5 rounded text-red-600 text-xs font-sans">
+              {error}
             </div>
           )}
 

@@ -28,7 +28,7 @@ def registration_movimentation(
     new_movimentation=Movimentation(
         product_id=movimentation.product_id,
         user_id=movimentation.user_id,
-        tipe=movimentation.type,
+        type=movimentation.type,
         quantity=movimentation.quantity,
         movimentation_data=movimentation.movimentation_data
     )

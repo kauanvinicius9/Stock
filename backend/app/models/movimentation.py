@@ -1,7 +1,5 @@
 from sqlalchemy import Column,Integer,String,DateTime,ForeignKey
-from sqlalchemy.orm import declarative_base
-
-Base = declarative_base()
+from app.models.database import Base
 
 class Movimentation(Base):
     __tablename__ = "movimentations"
