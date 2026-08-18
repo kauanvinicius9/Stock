@@ -1,10 +1,8 @@
 # STOCK
 
-###
 
-**<h3>Routes Front-End</h3>**
+### Routes Front-End
 
-###
 
 ```powershell
  http://127.0.0.1:8000/login
@@ -24,9 +22,7 @@
 
 ---
 
-**<h3>Routes Back-End</h3>**
-
-###
+### Routes Back-End
 
 > DOCS
 
