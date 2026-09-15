@@ -1,5 +1,6 @@
 ## Stock
 
+**Stock** is a management plataform of tools movimentations register to stock including a login system and total control of registers.
 
 ### Routes Front-End
 
@@ -24,7 +25,7 @@
 
 ### Routes Back-End
 
-> DOCS
+> Documentation
 
 ```powershell
 http://127.0.0.1:8000/docs
