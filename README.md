@@ -1,4 +1,4 @@
-## Stock
+# Stock
 
 **Stock** is a management plataform of tools movimentations register to stock including a login system and total control of registers.
 
