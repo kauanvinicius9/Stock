@@ -46,23 +46,7 @@ http://127.0.0.1:8000/stock/movimentation
 ```
 
 ```powershell
-http://127.0.0.1:8000/stock/movimentation
-```
-
-```powershell
 http://127.0.0.1:8000/products/ 
-```
-
-```powershell
-http://127.0.0.1:8000/products/{products_id}
-```
-
-```powershell
-http://127.0.0.1:8000/products/
-```
-
-```powershell
-http://127.0.0.1:8000/products/{products_id}
 ```
 
 ```powershell
