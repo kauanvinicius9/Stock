@@ -36,7 +36,7 @@
 1. Navigate to the backend folder:
 
    ```bash
-   cd Stock-main/backend
+   cd Stock/backend
    ```
 
 2. Create and activate a virtual environment (optional, but recommended):
@@ -73,7 +73,7 @@
 1. Navigate to the frontend folder in another terminal:
 
    ```bash
-   cd Stock-main/frontend
+   cd Stock/frontend
    ```
 
 2. Install dependencies:
