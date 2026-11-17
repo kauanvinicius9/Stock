@@ -6,7 +6,7 @@
 
 ## Technologies Used
 
-###Backend
+### Backend
 
 * **Framework:** Python with **FastAPI**.
 * **Database:** SQLite (`db.sqlite3` / `stock.sql`) via SQLAlchemy / ORM.
