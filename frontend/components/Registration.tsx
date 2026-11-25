@@ -156,34 +156,33 @@ export default function RegistrationProduct() {
               <header className="mb-4 pb-2 border-b border-zinc-100 flex items-center justify-between">
                 <h2 className="text-xs font-semibold text-zinc--300">{productId ? "Editar produto" : "Novo produto"}</h2>
 
-                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border ${
-                  productId 
-                    ? "bg-amber-500/10 text-amber-400 border-amber-500/20" 
-                    : "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
-                }`}>{productId ? "PUT" : "POST"}
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border ${productId ? "bg-amber-500/10 text-amber-400 border-amber-500/20" : "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"}`}>
+                  {productId ? "PUT" : "POST"}
                 </span>
               </header>
 
               <div className="space-y-3">
                 <div>
                   <label className="block text-[11px] text-zinc-400 mb-1">Nome</label>
-                  <input value={name} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)} placeholder="Nome do produto" className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black hover:bg-zinc-300"/>
+                  <input value={name} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)} placeholder="Nome do produto" className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black hover:bg-zinc-300" />
                 </div>
 
                 <div>
                   <label className="block text-[11px] text-zinc-400 mb-1">Descrição</label>
-                  <input value={description} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDescription(e.target.value)} placeholder="Descrição detalhada" className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black hover:bg-zinc-300"/>
+                  <input value={description} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDescription(e.target.value)} placeholder="Descrição detalhada" className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black hover:bg-zinc-300" />
                 </div>
 
                 <div>
                   <label className="block text-[11px] text-zinc-400 mb-1">Qtd. mínima</label>
-                  <input type="number" value={qtdMin} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQtdMin(e.target.value)} placeholder="0" className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black hover:bg-zinc-300"/>
+                  <input type="number" value={qtdMin} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setQtdMin(e.target.value)} placeholder="0" className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black hover:bg-zinc-300" />
                 </div>
               </div>
             </div>
 
             <div className="mt-6">
-              <button onClick={saveProduct} className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-700 text-white text-xs font-medium rounded cursor-pointer">{productId ? "Atualizar registro" : "Persistir no banco"}</button>
+              <button onClick={saveProduct} className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-700 text-white text-xs font-medium rounded cursor-pointer">
+                {productId ? "Atualizar registro" : "Persistir no banco"}
+              </button>
             </div>
           </div>
 
@@ -233,7 +232,6 @@ export default function RegistrationProduct() {
             )}
           </ul>
         </div>
-
       </div>
     </div>
   );

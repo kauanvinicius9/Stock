@@ -144,19 +144,13 @@ export default function ManagementProduct() {
                     <tr key={item.id || index} className="hover:bg-zinc-200">
                       <td className="py-2 px-3 text-zinc-400">{item.product_id}</td>
                       <td className="py-2 px-3">
-                        <span
-                          className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-bold ${
-                            item.type === "Entrada"
-                              ? "bg-green-600 text-white"
-                              : "bg-red-600 text-white"
-                          }`}>{item.type}
+                        <span className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-bold ${item.type === "Entrada" ? "bg-green-600 text-white" : "bg-red-600 text-white"}`}>
+                          {item.type}
                         </span>
-
                       </td>
                       <td className="py-2 px-3 text-zinc-400">{item.quantity}</td>
                       <td className="py-2 px-3 text-zinc-500">{item.movimentation_data || "N/A"}</td>
                     </tr>
-
                   ))}
                 </tbody>
               </table>

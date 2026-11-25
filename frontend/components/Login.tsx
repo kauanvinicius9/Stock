@@ -17,9 +17,7 @@ export default function Login() {
     try {
       const response = await fetch("http://127.0.0.1:8000/auth/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
 
@@ -33,7 +31,6 @@ export default function Login() {
       localStorage.setItem("user", email);
       router.refresh();
       router.push("/main");
-
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);
@@ -50,12 +47,12 @@ export default function Login() {
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
             <label className="block text-xs font-normal text-zinc-400 mb-1">Email / Usuário</label>
-            <input type="text" value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black focus:outline-none hover:bg-zinc-300" required/>
+            <input type="text" value={email} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black focus:outline-none hover:bg-zinc-300" required />
           </div>
 
           <div>
             <label className="block text-xs font-normal text-zinc-400 mb-1">Senha</label>
-            <input type="password" value={password} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black focus:outline-none hover:bg-zinc-300" required/>
+            <input type="password" value={password} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)} className="w-full px-3 py-1.5 text-xs bg-zinc-200 rounded text-black focus:outline-none hover:bg-zinc-300" required />
           </div>
 
           {error && (
