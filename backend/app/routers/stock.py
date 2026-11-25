@@ -10,15 +10,11 @@ router = APIRouter()
 
 @router.post("/input")
 def input():
-    return {
-        "mensagem": "Entrada registrada"
-    }
+    return {"mensagem": "Entrada registrada"}
 
 @router.post("/output")
 def output():
-    return {
-        "mensagem": "Saída registrada"
-    }
+    return {"mensagem": "Saída registrada"}
 
 @router.post("/movimentation")
 def registration_movimentation(
@@ -37,10 +33,7 @@ def registration_movimentation(
     db.commit()
     db.refresh(new_movimentation)
 
-    return {
-        "mensagem": "Movimentação registrada",
-        "dados": movimentation
-    }
+    return {"mensagem": "Movimentação registrada","dados": movimentation}
 
 @router.get("/movimentation")
 def list_movimentation(db: Session=Depends(get_db)):

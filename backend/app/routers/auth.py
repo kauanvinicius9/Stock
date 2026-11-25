@@ -18,26 +18,12 @@ pwd_context=CryptContext(
 def login(data: LoginSchema):
     
     db=SessionLocal()
-    user=db.query(User).filter(
-        User.email==data.email
-    ).first()
+    user=db.query(User).filter(User.email==data.email).first()
 
     if not user:
-        raise HTTPException(
-            status_code=401,
-            detail="Usuário não encontrado"
-        )
+        raise HTTPException(status_code=401,detail="Usuário não encontrado")
     
-    if not pwd_context.verify(
-        data.password,
-        user.password
-    ):
-        raise HTTPException(
-            status_code=401,
-            detail="Senha inválida"
-        )
+    if not pwd_context.verify(data.password,user.password):
+        raise HTTPException(status_code=401,detail="Senha inválida")
     
-    return {
-        "id": user.id,
-        "username": user.name
-    }
+    return {"id": user.id,"username": user.name}

@@ -6,7 +6,7 @@ pwd_context=CryptContext(schemes=["bcrypt"])
 db=SessionLocal()
 admin=User(
     name="admin",
-    email="admin@saep.com",
+    email="admin@stock.com",
     password=pwd_context.hash("12345")
 )
 
