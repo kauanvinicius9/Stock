@@ -6,7 +6,7 @@ CREATE TABLE user (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
     email VARCHAR(100),
-    senha VARCHAR(255)
+    password VARCHAR(255)
 );
 
 CREATE TABLE products (
